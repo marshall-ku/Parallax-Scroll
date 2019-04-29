@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parallax Scroll</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang === "ko-KR") {
+                document.documentElement.classList.add("korean")
+            }
+        </script>
+</head>
+
+<body>
+        <div class="parallax-item full" data-title="Simple Parallax Scroll" data-image="./images/1.jpg"></div>
+
+        <div class="scr-down">
+            <a href="#main" class="smt-scr">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+            <div class="down">
+                <span class="down-1"></span>
+                <span class="down-2"></span>
+            </div>
+        </div>
+
+        <section class="tmp">
+            <section id="main" class="container">
+                <div class="button" lang="not-KR">한글</div>
+                <div class="button" lang="ko-KR">Eng</div>
+                <h2 lang="not-KR">Introduction</h2>
+                <h2 lang="ko-kR">소개</h2>
+                <p lang="not-KR">Simple parallax scrolling effect with Javascript!</p>
+                <p lang="ko-KR">자바스크립트를 이용한 간단한 패럴렉스 스크롤(parallax scroll) 효과입니다.</p>
+                <p>
+                    <a href="#" download class="button">Download</a>
+                    <a href="#" class="button">Github</a>
+                </p>
+                <h2 lang="not-KR">Installation</h2>
+                <h2 lang="ko-KR">설치</h2>
+                <p lang="not-KR">Simply add js file that you've downloaded</p>
+                <p lang="ko-KR">간단하게 내려받은 js를 추가해주세요.</p>
+                <p><b>jQuery</b></p>
+                <div class="codeblock"><div>&lt;<span style="color: #e06c75;">script</span> <span style="color: #d19a66;">src</span>=<span style="color: #98c379;">"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"</span>&gt;&lt;/<span style="color: #e06c75;">script</span>&gt;</div><div>&lt;<span style="color: #e06c75;">script</span> <span style="color: #d19a66;">src</span>=<span style="color: #98c379;">"./path/to/parallax-scroll.jquery.js"</span>&gt;&lt;/<span style="color: #e06c75;">script</span>&gt;</div></div>
+                    <p><br></p>
+                    <p><b>Vanilla JS</b></p>
+                    <div class="codeblock"><div>&lt;<span style="color: #e06c75;">script</span> <span style="color: #d19a66;">src</span>=<span style="color: #98c379;">"./path/to/parallax-scroll.js"</span>&gt;&lt;/<span style="color: #e06c75;">script</span>&gt;</div></div>
+                    <h2 lang="not-KR">Usage</h2>
+                    <h2 lang="ko-KR">사용법</h2>
+                    <h3>HTML</h3>
+                    <div class="codeblock">&lt;<span style="color: #e06c75;">div</span> <span style="color: #d19a66;">class</span>=<span style="color: #98c379;">"parallax-item"</span> <span style="color: #d19a66;">data-image</span>=<span style="color: #98c379;">"./path/to/image.jpg"</span>&gt;&lt;/<span style="color: #e06c75;">div</span>&gt;</div>
+                    <h3>Javascript</h3>
+                    <p><b>jQuery</b></p>
+                    <div class="codeblock"><div>&lt;<span style="color: #e06c75;">script</span>&gt;</div><div>    <span style="color: #61afef;">$</span>(<span style="color: #98c379;">".parallax-item"</span>).<span style="color: #61afef;">parscroll</span>()</div><div>&lt;/<span style="color: #e06c75;">script</span>&gt;</div></div>
+                    <p><br></p>
+                    <p><b>Vanilla JS</b></p>
+                    <div class="codeblock"><div>&lt;<span style="color: #e06c75;">script</span>&gt;</div><div>    <span style="color: #61afef;">parscroll</span>(<span style="color: #98c379;">".parallax-item"</span>)</div><div>&lt;/<span style="color: #e06c75;">script</span>&gt;</div></div>
+                    <p><br></p>
+                    <p lang="not-KR">You can change the class name of ".parallax-item". But if you do so, you have to change CSS file too to make it work.</p>
+                    <p lang="ko-KR">".parallax-item"이란 Class를 변경하셔도 되지만, CSS도 함께 수정해주셔야 제대로 작동합니다.</p>
+            </section>
+            
+                    <div class="parallax-item" data-title="Options" data-image="./images/2.jpg"></div>
+            
+                    <section class="container">
+                        <h3 lang="not-KR">HTML Class name</h3>
+                        <h3 lang="ko-KR">HTML Class명</h3>
+                        <div class="codeblock">&lt;<span style="color: #e06c75;">div</span> <span style="color: #d19a66;">class</span>=<span style="color: #98c379;">"parallax-item full"</span> <span style="color: #d19a66;">data-image</span>=<span style="color: #98c379;">"./path/to/image.jpg"</span>&gt;&lt;/<span style="color: #e06c75;">div</span>&gt;</div>
+                        <p lang="not-KR">full : Lets your item fill the screen</p>
+                        <p lang="ko-KR">full : 아이템이 화면에 꽉 차도록 합니다.</p>
+                        <h3 lang="not-KR">HTML attributes</h3>
+                        <h3 lang="ko-KR">HTML 속성(attributes)</h3>
+                        <div class="codeblock">&lt;<span style="color: #e06c75;">div</span> <span style="color: #d19a66;">class</span>=<span style="color: #98c379;">"parallax-item"</span> <span style="color: #d19a66;">data-title</span>=<span style="color: #98c379;">"Title"</span> <span style="color: #d19a66;">data-image</span>=<span style="color: #98c379;">"./path/to/image.jpg"</span>&gt;&lt;/<span style="color: #e06c75;">div</span>&gt;</div>
+                        <p lang="not-KR">
+                            <ul lang="not-KR">
+                                <li lang="not-KR">data-image : Adds image to your item (Necessary!)</li>
+                                <li lang="not-KR">data-title : Adds title to your item</li>
+                            </ul>
+                        </p>
+                        <p lang="ko-KR">
+                            <ul lang="ko-KR">
+                                <li lang="ko-KR">data-image : 아이템에 배경 이미지를 추가합니다. (필수!)</li>
+                                <li lang="ko-KR">data-title : 아이템에 제목을 추가합니다.</li>
+                            </ul>
+                        </p>
+                        <h3 lang="not-KR">Javascript</h3>
+                        <h3 lang="ko-KR">자바스크립트</h3>
+                        <p><b>jQuery</b></p>
+                        <div class="codeblock"><div>&lt;<span style="color: #e06c75;">script</span>&gt;</div><div>    <span style="color: #61afef;">$</span>(<span style="color: #98c379;">".parallax-item"</span>).<span style="color: #61afef;">parscroll</span>({</div><div>        <span style="color: #e06c75;">speed</span>: <span style="color: #98c379;">".5"</span></div><div>    })</div><div>&lt;/<span style="color: #e06c75;">script</span>&gt;</div></div>
+                        <p><b>Vanilla JS</b></p>
+                        <div class="codeblock"><div>&lt;<span style="color: #e06c75;">script</span>&gt;</div><div>    <span style="color: #61afef;">parscroll</span>(<span style="color: #98c379;">".parallax-item"</span>, <span style="color: #98c379;">".5"</span>)</div><div>&lt;/<span style="color: #e06c75;">script</span>&gt;</div></div>
+                        <p lang="not-KR">You can change the scrolling speed of your item. (default : .3)</p>
+                        <p lang="ko-KR">아이템이 스크롤되는 속도를 변경하실 수 있습니다. (기본 : .3)</p>
+                    </section>
+            
+                    <div class="parallax-item full" data-image="./images/3.jpg"></div>
+                    <div class="parallax-item" data-image="./images/4.jpg"></div>
+            <footer>
+                Made with 💕 by <a href="https://marshall-ku.com" target="_blank">Marshall K</a>
+            </footer>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
